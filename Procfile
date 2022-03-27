@@ -1,1 +1,1 @@
-web: gunicorn dncproject.wsgi --log-file -
+web: gunicorn dncproject.wsgi:application --log-file - --log-level debug
