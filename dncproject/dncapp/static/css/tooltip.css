@@ -1,0 +1,46 @@
+.tooltip {
+    position: relative;
+    display: block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  
+  /* 툴팁 기본 스타일 설정 끝 */
+  
+  /* -------------------------- */
+  
+  /* 툴팁 화살표 기본 스타일 설정 시작 */
+  
+  .tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    border-style: solid;
+    border-width: 5px;
+  }
+
+  .tooltip .tooltip-right {
+    top: -5px;
+    left: 105%;
+  }
+  
+  .tooltip .tooltip-right::after {
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-color: transparent black transparent transparent;
+  }

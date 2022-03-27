@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                {% for form in forms %}
+                <div>
+                    <label for="{{ form.id_for_label }}">{{ form.label }}</label>
+                    {{ form }}
+                </div>
+            {% endfor %}
+<!-- <div class="wrapper" style="text-align: center;">
+    <h1>회원가입</h1>
+    <form method="POST">
+        <div style="color: red;">{{error2}}</div>
+        {% csrf_token %}
+        아이디: <br>
+        <input id="username" type="text" name="id">
+        <br>
+        비밀번호: <br>
+        <input id="pw" type="password" name="pw">
+        <br>
+        비밀번호 확인: <br>
+        <input id="pw-confirm" type="password" name="pw-confirm">
+        <br>
+        이름: <br>
+        <input id="name" type="text" name="name">
+        <br>
+        이메일: <br>
+        <input id="email" type="email" name="email">
+        <br> -->
+        {% for form in forms %}
+        {{ form.errors }}
+        {% endfor %}
+        <input type="submit" class="btn btn-success" name="register-submit" value="가입하기!">
+        <a class="btn btn-success" href="#">취소</a>
+        <br>
+    </form>
+</div>
+</div>
+</div>
+
+{% endblock %}

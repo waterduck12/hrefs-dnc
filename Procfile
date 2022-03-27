@@ -1,0 +1,1 @@
+web: gunicorn dncproject.wsgi --log-file -
