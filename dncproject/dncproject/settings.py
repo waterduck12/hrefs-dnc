@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'accounts',
     'bootstrap4',
     'debug_toolbar',
+    'django_heroku',
 ]
 
 MIDDLEWARE = [
